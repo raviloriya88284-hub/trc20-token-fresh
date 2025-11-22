@@ -1,0 +1,39 @@
+{
+  "name": "trc20-token-fresh",
+  "version": "1.0.0",
+  "description": "Fresh TRC20 Token Project for TRON Blockchain",
+  "main": "index.js",
+  "keywords": [
+    "tron",
+    "trc20",
+    "token",
+    "blockchain",
+    "smart-contract"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tronbox": "^2.7.20"
+  },
+  "dependencies": {
+    "@tronweb3/tronwallet-adapters": "^1.0.0",
+    "tronweb": "^5.3.2",
+    "qrcode": "^1.5.3"
+  },
+  "scripts": {
+    "compile": "tronbox compile",
+    "migrate": "tronbox migrate",
+    "test": "tronbox test",
+    "deploy:mainnet": "tronbox migrate --network mainnet",
+    "deploy:shasta": "tronbox migrate --network shasta",
+    "check-balance": "node scripts/check-balance.js",
+    "trigger-detection": "node scripts/trigger-wallet-detection.js",
+    "generate-qr": "node scripts/generate-qr-code.js",
+    "send-tokens": "node scripts/send-to-address.js",
+    "check-address": "node scripts/check-address-balance.js",
+    "check-trx": "node scripts/check-trx-balance.js",
+    "burn-all": "node scripts/burn-all-tokens.js",
+    "setup-github": "powershell -ExecutionPolicy Bypass -File setup-github-pages.ps1"
+  }
+}
+
